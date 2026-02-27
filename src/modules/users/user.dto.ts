@@ -3,3 +3,8 @@ export type UserCreateDTO = {
   username: string;
   password: string;
 };
+
+export type UpdateUserAddRoleDTO = {
+  _id: string;
+  roles: string[];
+};
