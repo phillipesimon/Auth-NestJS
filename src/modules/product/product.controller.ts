@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, UseGuards } from '@nestjs/common';
 import { CreateProductUseCase } from './useCases/create-product.usecase';
 import type { CreateProductDTO } from './product.dto';
 import { Role, Roles } from 'src/decorator/roles.decorators';
