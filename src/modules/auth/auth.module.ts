@@ -16,7 +16,7 @@ import { User, UserSchema } from '../users/user.schema';
     JwtModule.register({
       global: true,
       secret: 'NEST_AUTH',
-      signOptions: { expiresIn: '15s' },
+      signOptions: { expiresIn: '600s' },
     }),
   ],
   controllers: [AuthController],
