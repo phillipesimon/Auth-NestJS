@@ -5,7 +5,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './modules/users/users.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { ProductModule } from './modules/product/product.module';
-import { RolesGuard } from './infra/providers/roles-guard.provider';
 
 @Module({
   imports: [
@@ -15,6 +14,6 @@ import { RolesGuard } from './infra/providers/roles-guard.provider';
     ProductModule,
   ],
   controllers: [AppController],
-  providers: [{ provide: 'APP_GUARD', useClass: RolesGuard }, AppService],
+  providers: [AppService],
 })
 export class AppModule {}
