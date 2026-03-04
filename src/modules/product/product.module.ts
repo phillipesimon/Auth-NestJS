@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { ProductController } from './product.controller';
 import { CreateProductUseCase } from './useCases/create-product.usecase';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Product, ProductSchema } from './useCases/product.schema';
-
+import { Product, ProductSchema } from './product.schema';
+import { ListProductUseCase } from './useCases/list-product.usecase';
 @Module({
   imports: [
     MongooseModule.forFeature([
@@ -14,6 +14,6 @@ import { Product, ProductSchema } from './useCases/product.schema';
     ]),
   ],
   controllers: [ProductController],
-  providers: [CreateProductUseCase],
+  providers: [CreateProductUseCase, ListProductUseCase],
 })
 export class ProductModule {}
